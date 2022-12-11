@@ -1,0 +1,133 @@
+.general{
+    background-color: #F1F7ED;  
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 4px 4px 4px 4px;
+    justify-content: space-evenly;
+  }
+
+.width-res {
+    min-width: 400px;
+}
+
+a:link {
+    text-decoration: none;
+  }
+  
+  a:visited {
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: none;
+    color: rgb(255, 204, 0)!important;
+  }
+  
+  a:active {
+    text-decoration: none;
+    color: rgb(255, 204, 0)!important;
+  }
+
+  .airplane {
+    position: absolute;
+    bottom: 20;
+    animation-name: animeairplane;
+    animation-duration: 9s;
+    animation-iteration-count: initial;
+    animation-timing-function:linear;
+}
+
+.newfont {
+    font-family: 'Comforter Brush', cursive !important;
+}
+
+.f1 {
+    font-size: 4vw;
+}
+
+@keyframes animeairplane {
+    0%,100% {
+        transform: translate(0%);
+      }
+      50% {
+        transform: translate(400%, -250%);
+      }
+      50.1% {
+        transform: translate(-400%, 250%);
+      }
+}
+  
+  /* 3 equal columns that sits next to each other */
+  .column {
+    flex: 33%;
+    max-width: 33%;
+    padding: 4px 4px 4px 4px;
+  }
+  
+  .column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+    padding: 4px 4px 4px 4px;
+  }
+
+  .flexbox {
+    padding: 0px 20px 0px 20px; 
+}
+
+  .img-wrapper {
+    position: relative;
+  }
+  
+  .img-responsive {
+    width: 100%;
+    height: auto;
+  }
+  
+  .img-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+  }
+  
+  .img-overlay:before {
+    content: ' ';
+    display: block;
+    /* adjust 'height' to position overlay content vertically */
+    height: 50%;
+  }
+
+  .column:hover .img-responsive {
+    opacity: 0.8;
+    background-color: rgb(0, 27, 25);
+    transform: scale(0.95);
+  }
+  
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  @media screen and (max-width: 800px) {
+    .column {
+      flex: 50%;
+      max-width: 50%;
+    }
+
+    .flexbox {
+        width: 100%; 
+    }
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column {
+      flex: 100%;
+      max-width: 100%;
+    }
+    .flexbox {
+        width: 100%; 
+    }
+  }
